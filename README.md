@@ -12,8 +12,6 @@ git clone https://github.com/your-username/your-repo.git
 cd your-repo
 ```
 
-
-````markdown
 # mav
 
 Minimal VASP IO helper focused on `INCAR`, `POSCAR`, `KPOINTS`, `POTCAR` and Slurm job scripts.
