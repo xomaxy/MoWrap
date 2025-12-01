@@ -1,0 +1,13 @@
+site_name: MoWrap Documentation
+
+theme:
+  name: material
+
+plugins:
+  - mkdocstrings:
+      default_handler: python
+
+nav:
+  - Home: index.md
+  - API:
+      - Vaspy: api/vaspy.md

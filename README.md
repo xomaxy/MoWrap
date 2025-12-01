@@ -66,8 +66,9 @@ vas = Vaspy(root_path=Path("."))
 vas.read_inputs()
 
 # Inspect / modify INCAR
-print(vas.incar["ENCUT"])
-vas.incar["ENCUT"] = 520
+print(vas.incar.content["ENCUT"])
+vas.incar.content["ENCUT"] = {"value": 520, "comment": "New ENCUT"} #comments are optional
+
 
 # Save everything back to disk
 vas.save_all()
@@ -78,6 +79,7 @@ vas.save_all()
 ```python
 from mav.vaspy import Vaspy
 
+# auto_save = TRUE is default
 with Vaspy(root_path=".", auto_save=True) as vas:
     # Files are read automatically when entering the context
     vas.incar["ENCUT"] = 600
