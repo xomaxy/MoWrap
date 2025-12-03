@@ -3,28 +3,13 @@ Lightweight python wrapper to use chemistry simulation tools.
 
 ## Installation
 
-It is recommended to use a virtual environment (e.g. `conda`, `venv`, `mamba`).
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-```
-
-# mav
-
-Minimal VASP IO helper focused on `INCAR`, `POSCAR`, `KPOINTS`, `POTCAR` and Slurm job scripts.
-
-## Installation
-
 It is recommended to use a virtual environment (`conda`, `venv`, etc.).
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/mav.git
-cd mav
+git clone https://github.com/xomaxy/MoWrap.git
+cd MoWrap
 ````
 
 ### 2. (Optional) Create and activate a conda environment
@@ -66,7 +51,7 @@ vas = Vaspy(root_path=Path("."))
 vas.read_inputs()
 
 # Inspect / modify INCAR
-print(vas.incar.content["ENCUT"])
+print(vas.incar.content)
 vas.incar.content["ENCUT"] = {"value": 520, "comment": "New ENCUT"} #comments are optional
 
 
